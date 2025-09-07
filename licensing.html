@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Licensing Opportunities - Bricks Robotics</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <style>
@@ -784,12 +785,58 @@
     opacity: 0.85;
     transform: translateY(-3px);
 }
+
+/* --- Header Layout Adjustments --- */
+header {
+    padding: 0.5rem 0 !important; /* compact header */
+}
+
+.logo {
+    font-size: 1.4rem !important; /* smaller text */
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.logo-icon {
+    width: 42px !important;
+    height: 42px !important; /* reduce logo size */
+}
+
+.nav-menu {
+    gap: 1rem !important; /* tighter spacing */
+}
+
+.nav-menu a {
+    font-size: 0.95rem !important; /* slightly smaller font */
+}
+
+/* Ensure mobile keeps readability */
+@media (max-width: 768px) {
+    .nav-menu a {
+        font-size: 1rem !important;
+    }
+    .logo {
+        font-size: 1.4rem !important;
+    }
+    .logo-icon {
+        width: 42px !important;
+        height: 42px !important;
+    }
+}
+
+/* Dropdown toggle via click */
+.dropdown .dropdown-menu {
+    display: none;
+}
+.dropdown.active .dropdown-menu {
+    display: block;
+}
 </style>
 </head>
 <body>
 <!-- Animated Background -->
 <div class="animated-bg"></div>
-
 <!-- Floating Elements -->
 <div class="floating-elements">
 <i class="fas fa-cog floating-gear gear1" style="font-size: 3rem;"></i>
@@ -797,7 +844,6 @@
 <i class="fas fa-microchip floating-gear gear3" style="font-size: 2rem;"></i>
 <i class="fas fa-satellite floating-gear gear4" style="font-size: 2.8rem;"></i>
 </div>
-
 <!-- Header -->
 <header>
 <nav>
@@ -822,61 +868,63 @@
 <li><a href="#programs">Programs</a></li>
 <li><a href="#ages">Age Groups</a></li>
 <li><a href="#about">About Us</a></li>
-<li><a href="tel:+6588567367">Contact</a></li>
-<li><a href="https://wa.me/6588567367?text=Hi! I'm interested in Bricks Robotics programs. Can you tell me more?" style="background: linear-gradient(45deg, #FF6B9D, #4ECDC4); color: white;" target="_blank">Book Now!</a></li>
+<li class="dropdown">
+<a href="#">Contact <i class="fas fa-caret-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="mailto:ksbpl1218@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+<li><a href="https://wa.me/6588567367?text=Hi! I'm interested in Bricks Robotics programs. Can you tell me more?" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+                </a></li>
+</ul>
+</li>
+<li><a href="licensing.html">Licensing</a></li><li><a href="https://wa.me/6588567367?text=Hi! I'm interested in Bricks Robotics programs. Can you tell me more?" style="background: linear-gradient(45deg, #FF6B9D, #4ECDC4); color: white;" target="_blank">Book Now!</a></li>
 </ul>
 </nav>
 </header>
-
 <!-- Hero Section -->
 <section class="licensing-hero">
-  <h1>Licensing Opportunities</h1>
-  <p>Bring Bricks Robotics to your business, school, or preschool with our proven LEGO® bricks-based enrichment curriculum.</p>
+<h1>Licensing Opportunities</h1>
+<p>Bring Bricks Robotics to your business, school, or preschool with our proven LEGO® bricks-based enrichment curriculum.</p>
 </section>
-
 <!-- Why License -->
 <section class="licensing-section">
-  <h2>Why License with Bricks Robotics?</h2>
-  <ul class="licensing-list">
-    <li>Turnkey LEGO® bricks-based curriculum ready to launch.</li>
-    <li>Trusted enrichment programs that inspire creativity and learning.</li>
-    <li>Affordable entry point for entrepreneurs.</li>
-    <li>Flexible and customisable solutions to meet your requirements.</li>
-    <li>Wide range of curriculum for all age groups. <li>
-  </ul>
+<h2>Why License with Bricks Robotics?</h2>
+<ul class="licensing-list">
+<li>Turnkey LEGO® bricks-based curriculum ready to launch.</li>
+<li>Trusted enrichment programs that inspire creativity and learning.</li>
+<li>Affordable entry point for entrepreneurs.</li>
+<li>Flexible and customisable solutions to meet your requirements.</li>
+<li>Wide range of curriculum for all age groups. <li>
+</li></li></ul>
 </section>
-
 <!-- Who Is It For -->
 <section class="licensing-section">
-  <h2>Who Is It For?</h2>
-  <p>Our licensing opportunities are designed for:</p>
-  <ul class="licensing-list">
-    <li>Existing business owners seeking to expand their offerings.</li>
-    <li>Entrepreneurs looking to start a small business at a manageable cost.</li>
-    <li>Schools and preschools wanting to enrich their curriculum with LEGO® bricks-based learning.</li>
-  </ul>
+<h2>Who Is It For?</h2>
+<p>Our licensing opportunities are designed for:</p>
+<ul class="licensing-list">
+<li>Existing business owners seeking to expand their offerings.</li>
+<li>Entrepreneurs looking to start a small business at a manageable cost.</li>
+<li>Schools and preschools wanting to enrich their curriculum with LEGO® bricks-based learning.</li>
+</ul>
 </section>
-
 <!-- Training & Support -->
 <section class="licensing-section">
-  <h2>Training & Support</h2>
-  <p>We provide complete training, ongoing curriculum updates, and marketing guidance. You'll also benefit from continuous operational guidance to help your program succeed.</p>
+<h2>Training &amp; Support</h2>
+<p>We provide complete training, ongoing curriculum updates, and marketing guidance. You'll also benefit from continuous operational guidance to help your program succeed.</p>
 </section>
-
 <!-- Contact -->
 <section class="licensing-section">
-  <h2>Get in Touch</h2>
-  <p>Interested in licensing Bricks Robotics? Reach out today for more details!</p>
-  <div class="contact-options">
-    <a href="https://wa.me/6588567367?text=Hi! I'm interested in Bricks Robotics licensing opportunities." target="_blank" class="contact-btn whatsapp">
-      <i class="fab fa-whatsapp"></i> WhatsApp Us
+<h2>Get in Touch</h2>
+<p>Interested in licensing Bricks Robotics? Reach out today for more details!</p>
+<div class="contact-options">
+<a class="contact-btn whatsapp" href="https://wa.me/6588567367?text=Hi! I'm interested in Bricks Robotics licensing opportunities." target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp Us
     </a>
-    <a href="mailto:ksbpl1218@gmail.com?subject=Licensing%20Inquiry" class="contact-btn email">
-      <i class="fas fa-envelope"></i> Email Us
+<a class="contact-btn email" href="mailto:ksbpl1218@gmail.com?subject=Licensing%20Inquiry">
+<i class="fas fa-envelope"></i> Email Us
     </a>
-  </div>
+</div>
 </section>
-
 <!-- Footer -->
 <footer>
 <div class="footer-content">
@@ -923,5 +971,15 @@
 </div>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('active');
+        });
+    });
+});
+</script>
 </body>
 </html>
