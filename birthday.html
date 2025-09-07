@@ -433,6 +433,11 @@
             background: linear-gradient(135deg, #45B7D1, #667eea);
         }
 
+        .feature-card:nth-child(5) {
+            background: linear-gradient(135deg, #96CEB4, #FFEAA7);
+            color: #333;
+        }
+
         .feature-card::before {
             content: '';
             position: absolute;
@@ -467,7 +472,7 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        .feature-card:nth-child(3) i {
+        .feature-card:nth-child(3) i, .feature-card:nth-child(5) i {
             color: rgba(51, 51, 51, 0.8);
         }
 
@@ -477,14 +482,6 @@
         }
 
         /* Package Details */
-        .package-details {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem 0;
-        }
-
         .package-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -554,66 +551,6 @@
             font-weight: bold;
             color: #FFEAA7;
             margin-top: 1rem;
-        }
-
-        /* CTA Section */
-        .final-cta {
-            background: linear-gradient(135deg, #FFEAA7, #FFD93D);
-            color: #333;
-            text-align: center;
-            padding: 5rem 2rem;
-            margin: 4rem -2rem 0 -2rem;
-            border-radius: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .final-cta::before {
-            content: '🎉🎈🎂🎊🎁';
-            position: absolute;
-            top: -20px;
-            left: 0;
-            width: 100%;
-            font-size: 3rem;
-            animation: partyMove 15s linear infinite;
-            opacity: 0.3;
-        }
-
-        @keyframes partyMove {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .final-cta h2 {
-            color: #333;
-            font-size: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta-buttons-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 3rem auto 0;
-        }
-
-        .cta-btn-large {
-            background: linear-gradient(135deg, #FF6B9D, #FF8E8E);
-            color: white;
-            padding: 1.5rem 2rem;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        .cta-btn-large:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-            color: white;
         }
 
         /* WhatsApp Float */
@@ -697,10 +634,6 @@
             .package-grid {
                 grid-template-columns: 1fr;
             }
-
-            .cta-buttons-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -750,7 +683,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>🎂 Ultimate LEGO Birthday Parties! 🎉</h1>
-        <p>Give your child the most EPIC birthday celebration ever! 2 hours of pure LEGO magic, robotics fun, and unforgettable memories. No stress for parents, maximum joy for kids!</p>
+        <p>Give your child the most EPIC birthday celebration ever! 90 minutes of pure LEGO magic, robotics fun, and unforgettable memories. No stress for parents, maximum joy for kids!</p>
         <div class="hero-buttons">
             <a href="https://wa.me/6588567367?text=Hi! I want to book the ULTIMATE LEGO Birthday Party for my child! Can you tell me more about packages?" target="_blank" class="cta-button">
                 <i class="fas fa-gift"></i> Book Party Now!
@@ -760,49 +693,28 @@
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Package Highlight -->
-        <section class="package-highlight" id="party-packages">
-            <h3>🌟 Complete Party Package 🌟</h3>
-            <div class="price-tag">$750</div>
-            <div class="price-details">For up to 15 children • 2 Full Hours of Fun!</div>
-            <p style="font-size: 1.2rem;">Everything included for the perfect birthday celebration - we bring the party to YOU!</p>
-        </section>
-
-        <!-- What's Included Section -->
-        <section class="section">
-            <h2><i class="fas fa-star"></i> What Makes Our Parties AMAZING?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>2 Full Hours</h3>
-                    <p>90 minutes of epic LEGO building & games + 30 minutes for cake & snacks!</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-user-friends"></i>
-                    <h3>Expert Party Hosts</h3>
-                    <p>1-2 trained BRICKS 4 KIDZ® facilitators handle everything while you relax!</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-cubes"></i>
-                    <h3>TONS of Bricks</h3>
-                    <p>Endless creative play with our massive collection of LEGO® bricks!</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-home"></i>
-                    <h3>Your Location</h3>
-                    <p>We come to YOU! Your home, void deck, or FREE at Tanglin Mall!</p>
-                </div>
+        <!-- Complete Party Package -->
+        <section class="section" id="party-packages">
+            <h2><i class="fas fa-star"></i> Complete Party Package - $750</h2>
+            
+            <!-- Package Highlight -->
+            <div class="package-highlight" style="margin: 2rem 0;">
+                <h3>🌟 Everything Included for the Perfect Party! 🌟</h3>
+                <div class="price-details">For up to 15 children • 90 Minutes of Fun!</div>
+                <p style="font-size: 1.2rem;">We bring the party to YOU!</p>
             </div>
-        </section>
 
-        <!-- Package Details -->
-        <section class="package-details">
-            <h2 style="color: white; text-align: center; font-size: 2.5rem;">🎁 Complete Package Includes</h2>
+            <!-- Package Details -->
             <div class="package-grid">
                 <div class="package-item">
                     <i class="fas fa-gamepad"></i>
                     <h4>Fun Activities</h4>
                     <p>2 amazing building activities + plenty of interactive games with bricks</p>
+                </div>
+                <div class="package-item">
+                    <i class="fas fa-user-friends"></i>
+                    <h4>Fun Party Hosts</h4>
+                    <p>1-2 trained facilitators handle everything while you relax!</p>
                 </div>
                 <div class="package-item">
                     <i class="fas fa-cubes"></i>
@@ -812,28 +724,50 @@
                 <div class="package-item">
                     <i class="fas fa-envelope"></i>
                     <h4>Digital Invitations</h4>
-                    <p>Beautiful BRICKS 4 KIDZ® themed e-invitations for your guests</p>
-                </div>
-                <div class="package-item">
-                    <i class="fas fa-flag"></i>
-                    <h4>Party Decorations</h4>
-                    <p>Special birthday banner to make your celebration extra special</p>
-                </div>
-                <div class="package-item">
-                    <i class="fas fa-car"></i>
-                    <h4>FREE Delivery</h4>
-                    <p>We bring everything to your chosen location at no extra charge!</p>
+                    <p>Beautiful themed e-invitations for your guests</p>
                 </div>
                 <div class="package-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <h4>Flexible Venues</h4>
-                    <p>Your home, community center, or FREE drop-off party at Tanglin Mall</p>
+                    <p>Your home, or FREE drop-off party at Tanglin Mall</p>
                 </div>
             </div>
             
-            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 2rem; margin-top: 2rem; text-align: center;">
-                <h4 style="color: #FFEAA7; font-size: 1.3rem; margin-bottom: 1rem;">📝 Important Note</h4>
-                <p style="font-size: 1.1rem;">Food, cake, and drinks are not included - you provide the yummy treats while we handle all the fun!</p>
+            <div style="background: rgba(255, 107, 157, 0.1); border-radius: 15px; padding: 2rem; margin-top: 2rem; text-align: center;">
+                <h4 style="color: #FF6B9D; font-size: 1.3rem; margin-bottom: 1rem;">🍰 Important Note</h4>
+                <p style="font-size: 1.1rem;">Food, cake, and drinks are not included - you provide the yummy treats while we handle all the fun! Only cake is allowed at Tanglin Mall location.</p>
+            </div>
+        </section>
+
+        <!-- What Makes Our Parties Amazing -->
+        <section class="section">
+            <h2><i class="fas fa-heart"></i> What Makes Our Parties AMAZING?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>90 Minutes of Fun</h3>
+                    <p>Pure LEGO building & games - perfectly timed for maximum engagement!</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Your Location</h3>
+                    <p>We come to YOU! Your home, or FREE at Tanglin Mall!</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-smile-beam"></i>
+                    <h3>Stress-Free for Parents</h3>
+                    <p>We handle all the entertainment while you enjoy watching your child's joy!</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Educational Fun</h3>
+                    <p>STEAM learning disguised as play - kids build skills while having a blast!</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Picture-Perfect Moments</h3>
+                    <p>Create lasting memories with activities designed for amazing photo opportunities!</p>
+                </div>
             </div>
         </section>
 
@@ -856,49 +790,13 @@
             </div>
         </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="section">
-            <h2><i class="fas fa-heart"></i> Why Parents LOVE Our Parties</h2>
-            <div class="features-grid">
-                <div class="feature-card" style="background: linear-gradient(135deg, #96CEB4, #FFEAA7); color: #333;">
-                    <i class="fas fa-smile-beam" style="color: #FF6B9D;"></i>
-                    <h3>Stress-Free for Parents</h3>
-                    <p>We handle all the entertainment while you enjoy watching your child's joy!</p>
-                </div>
-                <div class="feature-card" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                    <i class="fas fa-brain"></i>
-                    <h3>Educational Fun</h3>
-                    <p>STEAM learning disguised as play - kids build skills while having a blast!</p>
-                </div>
-                <div class="feature-card" style="background: linear-gradient(135deg, #FF6B9D, #FF8E8E);">
-                    <i class="fas fa-camera"></i>
-                    <h3>Picture-Perfect Moments</h3>
-                    <p>Create lasting memories with activities designed for amazing photo opportunities!</p>
-                </div>
-                <div class="feature-card" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">
-                    <i class="fas fa-gift-box"></i>
-                    <h3>Take-Home Creations</h3>
-                    <p>Every child keeps their LEGO creation as the perfect party favor!</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Age Groups -->
         <section class="section">
-            <h2><i class="fas fa-birthday-cake"></i> Perfect for All Ages!</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin-top: 2rem;">
-                <div style="background: linear-gradient(135deg, #FF6B9D, #FF8E8E); color: white; padding: 3rem; border-radius: 20px; text-align: center;">
-                    <i class="fas fa-baby" style="font-size: 4rem; margin-bottom: 1.5rem; color: #FFEAA7;"></i>
-                    <h3 style="font-size: 2rem;">Below 5 Years Old</h3>
-                    <p style="font-size: 1.2rem; margin: 1rem 0;"><strong>Little Builders Party</strong></p>
-                    <p>Simple LEGO builds, interactive games, and plenty of giggles! Age-appropriate activities that develop fine motor skills while having incredible fun.</p>
-                </div>
-                <div style="background: linear-gradient(135deg, #4ECDC4, #44A08D); color: white; padding: 3rem; border-radius: 20px; text-align: center;">
-                    <i class="fas fa-robot" style="font-size: 4rem; margin-bottom: 1.5rem; color: #FFEAA7;"></i>
-                    <h3 style="font-size: 2rem;">5 Years & Above</h3>
-                    <p style="font-size: 1.2rem; margin: 1rem 0;"><strong>Robotics Builders Party</strong></p>
-                    <p>Exciting robotics model building and fun coding challenges! Kids create moving robots, learn basic programming, and tackle engineering puzzles.</p>
-                </div>
+            <h2><i class="fas fa-birthday-cake"></i> Perfect for Ages 4 and Above!</h2>
+            <div style="background: linear-gradient(135deg, #FF6B9D, #FF8E8E); color: white; padding: 3rem; border-radius: 20px; text-align: center; margin-top: 2rem;">
+                <i class="fas fa-users" style="font-size: 4rem; margin-bottom: 1.5rem; color: #FFEAA7;"></i>
+                <h3 style="font-size: 2rem;">Customized Activities for Every Child</h3>
+                <p>Our expert facilitators adapt all activities to cater to different age groups. Whether it's simple LEGO builds for younger children or exciting robotics challenges for older kids, everyone has an amazing time! Activities will be customized to cater to age group.</p>
             </div>
         </section>
 
@@ -938,7 +836,7 @@
                 </div>
                 <div style="background: #f8f9fa; border-radius: 15px; padding: 2rem; margin-bottom: 1rem;">
                     <h4 style="color: #FF6B9D; margin-bottom: 0.5rem;">❓ What if it rains?</h4>
-                    <p>No worries! Our parties work great indoors and outdoors. We're flexible!</p>
+                    <p>Our parties are all indoor only!</p>
                 </div>
                 <div style="background: #f8f9fa; border-radius: 15px; padding: 2rem; margin-bottom: 1rem;">
                     <h4 style="color: #FF6B9D; margin-bottom: 0.5rem;">❓ Can we have more than 15 children?</h4>
@@ -950,42 +848,15 @@
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <h2>🚀 Ready for the BEST Birthday Ever?</h2>
-        <p style="font-size: 1.3rem; margin-bottom: 2rem;">Don't let another birthday be ordinary - give your child an extraordinary LEGO adventure they'll never forget!</p>
-        
-        <div style="background: rgba(255, 107, 157, 0.2); border-radius: 20px; padding: 2rem; margin: 2rem auto; max-width: 600px;">
-            <h3 style="color: #FF6B9D; margin-bottom: 1rem;">🎯 Book Today & Get:</h3>
-            <div style="text-align: left; display: inline-block;">
-                <p>✅ FREE digital invitations</p>
-                <p>✅ FREE venue setup</p>
-                <p>✅ FREE take-home LEGO creations</p>
-                <p>✅ 100% stress-free celebration</p>
-                <p>✅ Memories that last forever</p>
+        <!-- Limited Availability -->
+        <section class="section">
+            <div style="background: rgba(255,255,255,0.9); border-radius: 15px; padding: 2rem; text-align: center;">
+                <h4 style="color: #FF6B9D; margin-bottom: 1rem;">🗓️ Limited Availability!</h4>
+                <p style="color: #333; font-weight: bold;">Weekends book up fast! Secure your child's special day now.</p>
             </div>
-        </div>
-        
-        <div class="cta-buttons-grid">
-            <a href="https://wa.me/6588567367?text=Hi! I want to book the ULTIMATE LEGO Birthday Party for my child! Here are my details: Child's name, age, preferred date, number of children, and location. Can you help me plan the perfect celebration?" target="_blank" class="cta-btn-large">
-                <i class="fas fa-birthday-cake"></i><br>
-                <strong>WhatsApp Book Now!</strong><br>
-                <small>Instant Response</small>
-            </a>
-            <a href="tel:+6588567367" class="cta-btn-large" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">
-                <i class="fas fa-phone"></i><br>
-                <strong>Call Us Direct</strong><br>
-                <small>+65 8856 7367</small>
-            </a>
-        </div>
-        
-        <div style="margin-top: 3rem; background: rgba(255,255,255,0.9); border-radius: 15px; padding: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-            <h4 style="color: #FF6B9D; margin-bottom: 1rem;">🗓️ Limited Availability!</h4>
-            <p style="color: #333; font-weight: bold;">Weekends book up fast! Secure your child's special day now.</p>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/6588567367?text=Hi! I'm interested in booking the ULTIMATE LEGO Birthday Party! Can you tell me about availability and packages?" target="_blank" class="whatsapp-float" title="Book Your Party Now!">
