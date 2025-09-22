@@ -5,6 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Licensing Opportunities - Bricks Robotics</title>
+<!-- Fredoka font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <style>
 
@@ -15,9 +17,15 @@
         }
 
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Fredoka', Arial, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* Fredoka for branding */
+        h1, h2, h3, h4, h5, h6,
+        .logo, .logo-main, .logo-sub {
+            font-family: 'Fredoka', Arial, sans-serif !important;
         }
 
         /* Animated Background */
@@ -236,58 +244,19 @@
         }
 
         /* Hero Section */
-        .hero {
+        .licensing-hero {
             text-align: center;
             padding: 4rem 2rem;
-            position: relative;
-            z-index: 10;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 1200px;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .licensing-hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            animation: bounceIn 1s ease-out;
-        }
-
-        @keyframes bounceIn {
-            0% { transform: scale(0.3); opacity: 0; }
-            50% { transform: scale(1.05); }
-            70% { transform: scale(0.9); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: white;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #FF6B9D, #FF8E8E);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
-            transition: all 0.3s ease;
-            animation: wiggle 3s ease-in-out infinite;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(255, 107, 157, 0.6);
-        }
-
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(1deg); }
-            75% { transform: rotate(-1deg); }
         }
 
         /* Main Content */
@@ -299,7 +268,8 @@
             z-index: 10;
         }
 
-        .section {
+        .section,
+        .licensing-section {
             margin: 4rem 0;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
@@ -308,6 +278,7 @@
             backdrop-filter: blur(10px);
         }
 
+        .licensing-section h2,
         .section h2 {
             font-size: 2.5rem;
             color: #FF6B9D;
@@ -316,6 +287,7 @@
             position: relative;
         }
 
+        .licensing-section h2::after,
         .section h2::after {
             content: '';
             display: block;
@@ -326,164 +298,140 @@
             border-radius: 2px;
         }
 
-        /* Programs Grid */
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .licensing-section p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
 
-        .program-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            color: white;
-            transition: all 0.3s ease;
-            cursor: pointer;
+        .licensing-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .licensing-list li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
             position: relative;
-            overflow: hidden;
         }
 
-        .program-card::before {
-            content: '';
+        .licensing-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s ease;
-            opacity: 0;
+            left: 0;
+            color: #4ECDC4;
         }
 
-        .program-card:hover::before {
-            animation: shine 0.5s ease-in-out;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
-        }
-
-        .program-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .program-card i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #FFEAA7;
-        }
-
-        .program-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Age Groups */
-        .age-groups {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
+        .contact-options {
+            text-align: center;
             margin-top: 2rem;
         }
 
-        .age-group {
-            background: linear-gradient(135deg, #4ECDC4, #44A08D);
-            color: white;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            min-width: 200px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .age-group:hover {
-            transform: rotate(5deg) scale(1.1);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .age-group i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #FFEAA7;
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 20px;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .feature i {
-            font-size: 2.5rem;
-            color: #FFEAA7;
-            margin-bottom: 1rem;
-        }
-
-        /* Call to Action */
-        .cta-section {
-            background: linear-gradient(135deg, #FF6B9D, #4ECDC4);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-            margin: 4rem -2rem 0 -2rem;
-            border-radius: 0;
-        }
-
-        .cta-section h2 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .cta-btn {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 1rem 2rem;
+        .contact-btn {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 50px;
-            text-decoration: none;
             font-weight: bold;
-            border: 2px solid white;
+            text-decoration: none;
+            color: white;
             transition: all 0.3s ease;
         }
 
-        .cta-btn:hover {
-            background: white;
-            color: #FF6B9D;
+        .contact-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .contact-btn.email {
+            background: #FF6B9D;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.85;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- Header Layout Adjustments --- */
+        header {
+            padding: 0.5rem 0 !important; /* compact header */
+        }
+
+        .logo {
+            font-size: 1.4rem !important; /* smaller text */
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .logo-icon {
+            width: 42px !important;
+            height: 42px !important; /* reduce logo size */
+        }
+
+        .nav-menu {
+            gap: 1rem !important; /* tighter spacing */
+        }
+
+        .nav-menu a {
+            font-size: 0.95rem !important; /* slightly smaller font */
+        }
+
+        /* Ensure mobile keeps readability */
+        @media (max-width: 768px) {
+            .nav-menu a {
+                font-size: 1rem !important;
+            }
+            .logo {
+                font-size: 1.4rem !important;
+            }
+            .logo-icon {
+                width: 42px !important;
+                height: 42px !important;
+            }
+        }
+
+        /* Dropdown toggle via click */
+        .dropdown .dropdown-menu {
+            display: none;
+        }
+        .dropdown.active .dropdown-menu {
+            display: block;
+        }
+
+        /* WhatsApp Floating Bot */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1001;
+            text-decoration: none;
+            animation: whatsappPulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            color: white;
+        }
+
+        @keyframes whatsappPulse {
+            0% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 5px 30px rgba(37, 211, 102, 0.7); }
+            100% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
         }
 
         /* Footer */
@@ -542,296 +490,6 @@
             transform: translateY(-3px) scale(1.1);
         }
 
-        /* Mobile Menu */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #FF6B9D;
-            cursor: pointer;
-        }
-
-        /* WhatsApp Floating Bot */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 70px;
-            height: 70px;
-            background: #25d366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            z-index: 1001;
-            text-decoration: none;
-            animation: whatsappPulse 2s infinite;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
-            color: white;
-        }
-
-        @keyframes whatsappPulse {
-            0% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 5px 30px rgba(37, 211, 102, 0.7); }
-            100% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
-        }
-
-        /* Robot Mascot */
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #4ECDC4, #45B7D1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            animation: bounce 2s infinite;
-        }
-
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem 0;
-        }
-
-        .testimonial-slider {
-            text-align: center;
-        }
-
-        .testimonial {
-            margin-bottom: 2rem;
-        }
-
-        .stars {
-            color: #FFEAA7;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Fun Animations */
-        .bounce-in {
-            animation: bounceIn 1s ease-out;
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 1s ease-out;
-        }
-
-        .slide-in-right {
-            animation: slideInRight 1s ease-out;
-        }
-
-        @keyframes slideInLeft {
-            0% { transform: translateX(-100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes slideInRight {
-            0% { transform: translateX(100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: rgba(255, 255, 255, 0.95);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .age-groups {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    
-
-/* Additional styling for licensing page */
-.licensing-hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    border-radius: 20px;
-    margin: 2rem auto;
-    max-width: 1200px;
-}
-
-.licensing-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.licensing-section {
-    max-width: 1000px;
-    margin: 3rem auto;
-    background: rgba(255,255,255,0.95);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.licensing-section h2 {
-    color: #FF6B9D;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.licensing-section p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.licensing-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-}
-
-.licensing-list li {
-    margin: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.licensing-list li::before {
-    content: "\f00c";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    color: #4ECDC4;
-}
-
-.contact-options {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.contact-btn {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.contact-btn.whatsapp {
-    background: #25D366;
-}
-
-.contact-btn.email {
-    background: #FF6B9D;
-}
-
-.contact-btn:hover {
-    opacity: 0.85;
-    transform: translateY(-3px);
-}
-
-/* --- Header Layout Adjustments --- */
-header {
-    padding: 0.5rem 0 !important; /* compact header */
-}
-
-.logo {
-    font-size: 1.4rem !important; /* smaller text */
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.logo-icon {
-    width: 42px !important;
-    height: 42px !important; /* reduce logo size */
-}
-
-.nav-menu {
-    gap: 1rem !important; /* tighter spacing */
-}
-
-.nav-menu a {
-    font-size: 0.95rem !important; /* slightly smaller font */
-}
-
-/* Ensure mobile keeps readability */
-@media (max-width: 768px) {
-    .nav-menu a {
-        font-size: 1rem !important;
-    }
-    .logo {
-        font-size: 1.4rem !important;
-    }
-    .logo-icon {
-        width: 42px !important;
-        height: 42px !important;
-    }
-}
-
-/* Dropdown toggle via click */
-.dropdown .dropdown-menu {
-    display: none;
-}
-.dropdown.active .dropdown-menu {
-    display: block;
-}
 </style>
 </head>
 <body>
@@ -877,7 +535,7 @@ header {
                 </a></li>
 </ul>
 </li>
-<li><a href="licensing.html">Licensing</a></li><li><a href="https://wa.me/6588567367?text=Hi! I'm interested in Bricks Robotics programs. Can you tell me more?" style="background: linear-gradient(45deg, #FF6B9D, #4ECDC4); color: white;" target="_blank">Book Now!</a></li>
+<li><a href="licensing.html">Licensing</a></li><li><a href="https://wa.me/6588567367?text=Hi! I'm interested in Bricks Robotics programs. Can you tell me more?" style="background: linear-gradient(45de[...]
 </ul>
 </nav>
 </header>
