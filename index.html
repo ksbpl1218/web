@@ -636,6 +636,16 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .section {
+                margin: 2rem 0;
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+
             .nav-menu {
                 display: none;
                 position: absolute;
@@ -656,18 +666,76 @@
                 display: block;
             }
 
+            .hero {
+                padding: 2rem 1rem;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0;
+            }
+
+            .program-card {
+                padding: 1.5rem;
+            }
+
+            .program-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .program-card p {
+                font-size: 0.95rem;
             }
 
             .age-groups {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
+            }
+
+            .age-group {
+                width: 100%;
+                max-width: 280px;
+                padding: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .feature {
+                padding: 1.5rem;
+            }
+
+            .feature h3 {
+                font-size: 1.2rem;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
             }
 
             .nav-menu a {
@@ -679,6 +747,38 @@
             .logo-icon {
                 width: 42px;
                 height: 42px;
+            }
+
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .section {
+                padding: 1rem;
+                margin: 1.5rem 0;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .program-card {
+                padding: 1rem;
+            }
+
+            .age-group {
+                padding: 1rem;
+            }
+
+            nav {
+                padding: 0 1rem;
             }
         }
     
